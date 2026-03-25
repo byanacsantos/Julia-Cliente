@@ -1,8 +1,38 @@
+/* Reset CSS */
+* {
+   /* Maergem */
+   margin: 0;
+}
+
+
 body {
     /*  Cor Fundo */
-    background-color: #ffffff;
+    background-color: #f3efdb;
 
     /* Cor Textos */
+    color: #580303;
 
-    color: ;
+
+ }
+
+  /* Seletor para os A */
+a {
+    /* Propriedade e Valor */
+    text-decoration: none;
+    color: black ;
+}
+
+
+
+
+
+/* Header */
+header {
+    /* ROW  linha horizontal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0e3bf;
+    /* largura ou comprimento */
+    width: 100%;
 }
