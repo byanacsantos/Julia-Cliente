@@ -37,3 +37,11 @@ header {
     /* largura ou comprimento */
     width: 100%;
 }
+/* UL */
+.menu {
+    list-style: none;
+    /* lista Horizintal */
+    display: flex;
+    /* Espaço */
+    gap: 1rem;
+}
