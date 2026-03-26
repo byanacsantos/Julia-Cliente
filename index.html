@@ -21,37 +21,38 @@
     <!-- Cabeçalho -->
     <header>
         <!-- logo -->
-        <div>
+        <div class="header-logo">
 
-            <a href="https://estevão'wines.com">
-                Meu Logo
+            <a href="#home">
+                Logo
             </a>
         </div>
 
         <!-- Menu desktop / PC -->
-        <nav>
-            <ul>
+        <nav class="menu-desktop">
+            <ul class="menu">
                 <li>
-                    <a href="">
-                        <span> HOME </span>
+                    <!-- cria links -->
+                    <a href="#home" class="menu-link active">
+                        <span class="menu-texto"> HOME </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
-                        <span> PRODUTOS </span>
+                    <a href="#produtos" class="menu-link">
+                        <span class="menu-texto"> PRODUTOS </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
-                        <span> SOBRE </span>
+                    <a href="#sobre" class="menu-link">
+                        <span class="menu-texto"> SOBRE </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
-                        <span> CONTATO </span>
+                    <a href="contato" class="menu-link">
+                        <span class="menu-texto"> CONTATO </span>
                     </a>
                 </li>
             </ul>
@@ -60,11 +61,11 @@
         <!-- Tema Desktop -->
 
         <!--  Trocar Tema Cor -->
-        <div>
-            <i class="bi bi-sun"></i>
+        <div class="header-toggle">
+            <i class="bi bi-sun" id="toggleTheme"> </i>
 
             <!-- Botão Burguer -->
-             <button>
+             <button class="btn-menu-mobile" id="menuHamburger">
                 <i class="bi bi-list-ul"></i>
              </button>
         </div>
