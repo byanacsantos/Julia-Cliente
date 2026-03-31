@@ -42,6 +42,32 @@ header {
     list-style: none;
     /* lista Horizintal */
     display: flex;
-    /* Espaço */
+    /* Espaço entre TAGS */
     gap: 1rem;
 }
+/*  TAG NAV */
+.menu-desktop{
+    display: none;
+
+}
+ /* Daqui par cima versão Mobile */
+
+    /* Responsivo */
+
+    /* Serve para Telas Maiores */
+
+    /*  Telas Maiores que 768px */
+
+    @media(min-width: 768px) {
+        header {
+        /* espaço inteiro  */
+        padding: 1rem 6rem;
+        }
+
+        /* NAV */
+        .menu-desktop{
+            display: flex;
+            justify-content:;
+            gap: ;
+        }
+    }
