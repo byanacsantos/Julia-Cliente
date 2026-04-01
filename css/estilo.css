@@ -11,7 +11,7 @@ body {
     background-color: #f3efdb;
 
     /* Cor Textos */
-    color: #580303;
+    color: #ffffff;
 
 
  }
@@ -20,7 +20,7 @@ body {
 a {
     /* Propriedade e Valor */
     text-decoration: none;
-    color: black ;
+    color: rgb(255, 255, 255) ;
 }
 
 
@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0e3bf;
+    background-color: #491111;
     /* largura ou comprimento */
     width: 100%;
 }
@@ -49,7 +49,13 @@ header {
 .menu-desktop{
     display: none;
 
+    }
+
+    /* Logo */
+.logo{
+    width: 6rem;
 }
+
  /* Daqui par cima versão Mobile */
 
     /* Responsivo */
@@ -68,6 +74,6 @@ header {
         .menu-desktop{
             display: flex;
             justify-content:;
-            gap: ;
+            gap:;
         }
     }
