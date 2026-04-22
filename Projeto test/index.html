@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estevão'Wines — Vinhos premium selecionados com paixão e tradição. Descubra nossa coleção exclusiva de vinhos finos." />
+  <meta name="keywords" content="vinhos, wine, Estevão Wines, vinho premium, adega, sommelier" />
+  <title>Estevão'Wines — Vinhos Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">🍷</span>
+        <span class="logo-text">Estevão<span class="logo-accent">'Wines</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-section="home">Início</a>
+        <a href="#about" class="nav-link" data-section="about">Nossa História</a>
+        <a href="#catalog" class="nav-link" data-section="catalog">Vinhos</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experiência</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contato</a>
+      </nav>
+      <button class="nav-cta" id="navCta" onclick="scrollToSection('contact')">Faça seu Pedido</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-up">✦ Desde 1987 ✦</p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        A Arte de<br/>
+        <em>Apreciar o Vinho</em>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Vinhos premium cuidadosamente selecionados de<br/>
+        vinícolas renomadas ao redor do mundo.
+      </p>
+      <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="300">
+        <button class="btn-primary" onclick="scrollToSection('catalog')">Explorar Vinhos</button>
+        <button class="btn-ghost" onclick="scrollToSection('about')">Nossa História</button>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat">
+          <span class="stat-num" data-target="200">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Rótulos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="37">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Anos de Tradição</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Países</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wine-glass">
+      <div class="glass-illustration">
+        <div class="glass-top"></div>
+        <div class="glass-liquid">
+          <div class="glass-wave"></div>
+        </div>
+        <div class="glass-stem"></div>
+        <div class="glass-base"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Role para descobrir</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="about-card about-card-1">
+              <div class="about-card-icon">🌿</div>
+              <h4>Vinhedos Selecionados</h4>
+              <p>Uvas das melhores regiões do mundo</p>
+            </div>
+            <div class="about-card about-card-2">
+              <div class="about-card-icon">🏆</div>
+              <h4>Premiados</h4>
+              <p>Mais de 50 prêmios internacionais</p>
+            </div>
+            <div class="about-card about-card-3">
+              <div class="about-card-icon">👨‍🍳</div>
+              <h4>Sommeliers Experts</h4>
+              <p>Curadoria por especialistas certificados</p>
+            </div>
+          </div>
+          <div class="about-badge">
+            <span class="badge-year">1987</span>
+            <span class="badge-text">Fundação</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="section-eyebrow">Nossa História</p>
+          <h2 class="section-title">Tradição que se<br/><em>transforma em paixão</em></h2>
+          <p class="about-text">
+            A Estevão'Wines nasceu do amor genuíno pelo vinho. Fundada em 1987 por Estevão Carvalho, nossa adega começou como um pequeno projeto familiar e se tornou referência em vinhos premium no Brasil.
+          </p>
+          <p class="about-text">
+            Trabalhamos diretamente com as melhores vinícolas da França, Itália, Portugal, Argentina e Chile — garantindo que cada garrafa que chega até você carregue a essência do terroir de origem.
+          </p>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <span>Qualidade sem compromisso</span>
+            </div>
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <span>Seleção rigorosa de rótulos</span>
+            </div>
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <span>Entrega com cuidado</span>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="scrollToSection('catalog')">Conheça Nossos Vinhos</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG ===== -->
+  <section id="catalog" class="catalog">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Nossa Coleção</p>
+        <h2 class="section-title">Vinhos Selecionados</h2>
+        <p class="section-subtitle">Cada garrafa conta uma história única. Descubra nossos rótulos mais aclamados.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" id="filterAll">Todos</button>
+        <button class="filter-btn" data-filter="tinto" id="filterTinto">Tintos</button>
+        <button class="filter-btn" data-filter="branco" id="filterBranco">Brancos</button>
+        <button class="filter-btn" data-filter="rose" id="filterRose">Rosés</button>
+        <button class="filter-btn" data-filter="espumante" id="filterEspumante">Espumantes</button>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid">
+
+        <div class="wine-card" data-category="tinto">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #4a0010, #8b1a2e);">
+            <div class="wine-bottle-svg tinto">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">🍷</div>
+              </div>
+            </div>
+            <span class="wine-badge">Destaque</span>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇫🇷 França</span>
+              <span class="wine-year">2020</span>
+            </div>
+            <h3 class="wine-name">Château Margaux Reserva</h3>
+            <p class="wine-grape">Cabernet Sauvignon • Merlot</p>
+            <p class="wine-desc">Elegância bordalesa com notas de ameixa, especiarias e um final longo e persistente.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">98 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 890,00</span>
+              <button class="btn-add" id="addMargaux">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wine-card" data-category="tinto">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #3d0a1a, #7a1535);">
+            <div class="wine-bottle-svg tinto">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">🍷</div>
+              </div>
+            </div>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇪🇸 Espanha</span>
+              <span class="wine-year">2019</span>
+            </div>
+            <h3 class="wine-name">Vega Sicilia Único</h3>
+            <p class="wine-grape">Tempranillo • Cabernet Sauvignon</p>
+            <p class="wine-desc">O ícone de Ribera del Duero. Complexo, elegante e com uma longevidade extraordinária.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">97 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 1.250,00</span>
+              <button class="btn-add" id="addVega">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wine-card" data-category="branco">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #1a3a2a, #2d6b4a);">
+            <div class="wine-bottle-svg branco">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">🥂</div>
+              </div>
+            </div>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇵🇹 Portugal</span>
+              <span class="wine-year">2022</span>
+            </div>
+            <h3 class="wine-name">Quinta do Crasto Branco</h3>
+            <p class="wine-grape">Rabigato • Viosinho • Gouveio</p>
+            <p class="wine-desc">Fresco e mineral, com notas de frutos cítricos e flores brancas. Ideal para frutos do mar.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">92 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 320,00</span>
+              <button class="btn-add" id="addCrasto">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wine-card" data-category="espumante">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #2a1a00, #8a6200);">
+            <div class="wine-bottle-svg espumante">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">✨</div>
+              </div>
+            </div>
+            <span class="wine-badge">Top Seller</span>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇫🇷 França</span>
+              <span class="wine-year">NV</span>
+            </div>
+            <h3 class="wine-name">Dom Pérignon Brut</h3>
+            <p class="wine-grape">Chardonnay • Pinot Noir</span></p>
+            <p class="wine-desc">A cuvée mais icônica do mundo. Borbulhas finas, notas de brioche e castanha tostada.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">99 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 2.100,00</span>
+              <button class="btn-add" id="addDomPerignon">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wine-card" data-category="rose">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #4a1535, #c4647e);">
+            <div class="wine-bottle-svg rose">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">🌹</div>
+              </div>
+            </div>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇫🇷 Provença</span>
+              <span class="wine-year">2023</span>
+            </div>
+            <h3 class="wine-name">Whispering Angel Rosé</h3>
+            <p class="wine-grape">Grenache • Cinsault • Vermentino</p>
+            <p class="wine-desc">O rosé mais desejado do mundo. Delicado, com aromas de pêssego branco e flores silvestres.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">93 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 480,00</span>
+              <button class="btn-add" id="addAngel">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wine-card" data-category="tinto">
+          <div class="wine-card-header" style="background: linear-gradient(135deg, #1a0833, #4a1a7a);">
+            <div class="wine-bottle-svg tinto">
+              <div class="bottle-neck"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">🍇</div>
+              </div>
+            </div>
+          </div>
+          <div class="wine-card-body">
+            <div class="wine-meta">
+              <span class="wine-country">🇦🇷 Argentina</span>
+              <span class="wine-year">2021</span>
+            </div>
+            <h3 class="wine-name">Achaval Ferrer Malbec</h3>
+            <p class="wine-grape">Malbec 100%</p>
+            <p class="wine-desc">Mendoza no seu melhor. Denso, frutado e estruturado com taninos sedosos e aveludados.</p>
+            <div class="wine-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">95 pts</span>
+            </div>
+            <div class="wine-footer">
+              <span class="wine-price">R$ 560,00</span>
+              <button class="btn-add" id="addAchaval">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="experience">
+    <div class="experience-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Por que nos escolher</p>
+        <h2 class="section-title">A Experiência<br/><em>Estevão'Wines</em></h2>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card" id="expCard1">
+          <div class="exp-icon">🚚</div>
+          <h3>Entrega Especial</h3>
+          <p>Embalagem premium com proteção e temperatura controlada para preservar cada garrafa.</p>
+        </div>
+        <div class="exp-card" id="expCard2">
+          <div class="exp-icon">🧑‍💼</div>
+          <h3>Consultoria Exclusiva</h3>
+          <p>Nossa equipe de sommeliers indica o vinho ideal para cada ocasião e paladar.</p>
+        </div>
+        <div class="exp-card" id="expCard3">
+          <div class="exp-icon">🎁</div>
+          <h3>Kits Présente</h3>
+          <p>Monte cestas e kits personalizados com card especial para presentes inesquecíveis.</p>
+        </div>
+        <div class="exp-card" id="expCard4">
+          <div class="exp-icon">📱</div>
+          <h3>Clube do Vinho</h3>
+          <p>Assine e receba mensalmente rótulos exclusivos com curadoria dos nossos especialistas.</p>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h3 class="testimonials-title">O que nossos clientes dizem</h3>
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial active" id="testimonial1">
+            <p class="testimonial-text">"Descobri o vinho perfeito para o meu casamento através da curadoria da Estevão'Wines. Qualidade impecável e entrega impecável!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MC</div>
+              <div>
+                <strong>Marina Costa</strong>
+                <span>São Paulo, SP</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" id="testimonial2">
+            <p class="testimonial-text">"O clube do vinho mudou minha vida! Todo mês é uma surpresa incrível. Já descobri rótulos que jamais encontraria em outro lugar."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RA</div>
+              <div>
+                <strong>Ricardo Alves</strong>
+                <span>Rio de Janeiro, RJ</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" id="testimonial3">
+            <p class="testimonial-text">"Presente para meu pai de 60 anos. O kit enviado foi absolutamente luxuoso. Ele adorou cada detalhe. Com certeza voltarei!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JS</div>
+              <div>
+                <strong>Juliana Santos</strong>
+                <span>Belo Horizonte, MG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots">
+          <button class="dot active" data-index="0" id="dot0" aria-label="Depoimento 1"></button>
+          <button class="dot" data-index="1" id="dot1" aria-label="Depoimento 2"></button>
+          <button class="dot" data-index="2" id="dot2" aria-label="Depoimento 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-eyebrow">Entre em Contato</p>
+          <h2 class="section-title">Faça seu<br/><em>Pedido Agora</em></h2>
+          <p class="contact-desc">Nossa equipe está pronta para te ajudar a encontrar o vinho perfeito. Entre em contato e receba uma consultoria gratuita!</p>
+          <div class="contact-items">
+            <div class="contact-item" id="contactPhone">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Telefone</strong>
+                <span>(11) 9 9999-9999</span>
+              </div>
+            </div>
+            <div class="contact-item" id="contactEmail">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>E-mail</strong>
+                <span>contato@estevaowines.com.br</span>
+              </div>
+            </div>
+            <div class="contact-item" id="contactAddress">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Endereço</strong>
+                <span>Rua dos Vinhedos, 1987 — São Paulo, SP</span>
+              </div>
+            </div>
+            <div class="contact-item" id="contactHours">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <strong>Horário</strong>
+                <span>Seg–Sex: 9h–18h | Sáb: 10h–16h</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn" id="socialInsta" aria-label="Instagram">📸 Instagram</a>
+            <a href="#" class="social-btn" id="socialWhats" aria-label="WhatsApp">💬 WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Nome completo</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="(00) 9 0000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="interest">Interesse</label>
+              <select id="interest" name="interest">
+                <option value="">Selecione...</option>
+                <option value="compra">Compra de vinhos</option>
+                <option value="clube">Clube do Vinho</option>
+                <option value="presente">Kits Presente</option>
+                <option value="consultoria">Consultoria</option>
+                <option value="evento">Evento</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="4" placeholder="Conte-nos mais sobre o que você precisa..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="submitForm">
+              <span class="btn-text">Enviar Mensagem</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="success-icon">✅</div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigado pelo contato. Nossa equipe retornará em até 24 horas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-icon">🍷</span>
+            <span class="logo-text">Estevão<span class="logo-accent">'Wines</span></span>
+          </div>
+          <p class="footer-tagline">Paixão em cada garrafa desde 1987.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Nossa História</a></li>
+            <li><a href="#catalog">Vinhos</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#contact">Clube do Vinho</a></li>
+            <li><a href="#contact">Kits Presente</a></li>
+            <li><a href="#contact">Consultoria</a></li>
+            <li><a href="#contact">Eventos</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Receba novidades e ofertas exclusivas!</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="seu@email.com" />
+            <button id="newsletterBtn" type="button">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Estevão'Wines. Todos os direitos reservados.</p>
+        <p>Beba com moderação. Venda proibida para menores de 18 anos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Cart Bubble -->
+  <div class="cart-bubble" id="cartBubble">
+    <span class="cart-icon">🛒</span>
+    <span class="cart-count" id="cartCount">0</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
