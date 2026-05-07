@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Selection | Estevão’Wines</title>
+    <title>Champagne Selection | Estevão’Wines</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="whisky.css">
+    <link rel="stylesheet" href="whisky.css"> <!-- Reusing same layout styles -->
 </head>
-<body class="whisky-page"> <!-- Reusing whisky-page class for consistent styling -->
+<body class="whisky-page">
     <header id="main-header">
         <nav class="header-container">
             <a href="menu.html" class="back-button" aria-label="Voltar para Produtos">
@@ -74,58 +74,58 @@
         </nav>
     </div>
 
-    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/vineyard.jpg');">
-        <h1 data-reveal="bottom">Nossa Adega</h1>
-        <p data-reveal="bottom">Rótulos selecionados que traduzem a alma de grandes terroirs ao redor do mundo.</p>
+    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-serving.png');">
+        <h1 data-reveal="bottom">Champanhes</h1>
+        <p data-reveal="bottom">A essência do luxo e da tradição francesa. Descubra rótulos exclusivos que celebram a vida com sofisticação.</p>
     </section>
 
     <main class="products-section">
         <div class="products-grid">
-            <!-- Lumière Blanc -->
+            <!-- Belle Étoile Rosé -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_lumiere.png" alt="Lumière Blanc" class="product-image">
+                <img src="assets/champagne_belle_etoile.png" alt="Champagne Belle Étoile Rosé" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Branco Seco • Chardonnay • 2022</span>
-                    <h2>Lumière Blanc</h2>
-                    <p class="product-description">Um Chardonnay vibrante do Vale dos Vinhedos. Apresenta frescor intenso, notas cítricas e uma harmonia perfeita para momentos leves.</p>
-                    <p class="product-price">R$ 145,00</p>
-                    <button class="btn-add" data-name="Lumière Blanc Chardonnay" data-price="145.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Champagne Rosé • Brut • Produit de France</span>
+                    <h2>Belle Étoile</h2>
+                    <p class="product-description">Um Champagne Rosé deslumbrante, com notas delicadas de frutas silvestres e uma elegância floral que define momentos especiais.</p>
+                    <p class="product-price">R$ 580,00</p>
+                    <button class="btn-add" data-name="Champagne Belle Étoile Rosé" data-price="580.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Éclat Rouge -->
+            <!-- Légende Brut -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_eclat.png" alt="Éclat Rouge" class="product-image">
+                <img src="assets/champagne_legende.png" alt="Champagne Légende Brut" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Tinto Seco • Cabernet Sauvignon • 2020</span>
-                    <h2>Éclat Rouge</h2>
-                    <p class="product-description">Cabernet Sauvignon encorpado da Serra Gaúcha. Revela profundidade, caráter e notas de frutas vermelhas maduras com um toque de carvalho.</p>
-                    <p class="product-price">R$ 185,00</p>
-                    <button class="btn-add" data-name="Éclat Rouge Cabernet" data-price="185.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Champagne • Brut • Produit de France</span>
+                    <h2>Légende</h2>
+                    <p class="product-description">Uma lenda em cada borbulha. Com estrutura marcante e frescor vibrante, este Champagne Brut é a escolha dos conhecedores.</p>
+                    <p class="product-price">R$ 620,00</p>
+                    <button class="btn-add" data-name="Champagne Légende Brut" data-price="620.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Noir Prestige -->
+            <!-- Élégance Brut -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_noir.png" alt="Noir Prestige" class="product-image">
+                <img src="assets/champagne_elegance.png" alt="Champagne Élégance Brut" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Tinto Seco • Merlot • 2019</span>
-                    <h2>Noir Prestige</h2>
-                    <p class="product-description">Elegante Merlot do Vale do Colchagua, Chile. Um vinho tinto de estrutura sofisticada, taninos aveludados e final persistente.</p>
-                    <p class="product-price">R$ 260,00</p>
-                    <button class="btn-add" data-name="Noir Prestige Merlot" data-price="260.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Champagne • Brut • Produit de France</span>
+                    <h2>Élégance</h2>
+                    <p class="product-description">A expressão máxima da sofisticação. Este Champagne Brut equilibra notas cítricas e florais com uma textura sedosa e final longo.</p>
+                    <p class="product-price">R$ 650,00</p>
+                    <button class="btn-add" data-name="Champagne Élégance Brut" data-price="650.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Reserva Especial -->
+            <!-- Domaine du Soleil -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_reserva_especial.png" alt="Reserva Especial" class="product-image">
+                <img src="assets/chardonnay_domaine_soleil.png" alt="Domaine du Soleil Chardonnay" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Reserva Famille • Douro • 2018</span>
-                    <h2>Reserva Especial</h2>
-                    <p class="product-description">A máxima expressão do Douro, Portugal. Uma reserva de família que combina tradição e excelência em um blend complexo e marcante.</p>
-                    <p class="product-price">R$ 420,00</p>
-                    <button class="btn-add" data-name="Reserva Especial Douro" data-price="420.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Chardonnay • Napa Valley • Cave & Vineyard</span>
+                    <h2>Domaine du Soleil</h2>
+                    <p class="product-description">A expressão solar da Califórnia. Um Chardonnay excepcional do Napa Valley, com notas amanteigadas e frutas tropicais maduras.</p>
+                    <p class="product-price">R$ 450,00</p>
+                    <button class="btn-add" data-name="Vinho Domaine du Soleil Chardonnay" data-price="450.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
         </div>

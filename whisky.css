@@ -16,6 +16,25 @@
     background-size: cover;
     background-position: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.whisky-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.whisky-hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 .whisky-hero h1 {

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Selection | Estevão’Wines</title>
+    <title>Espumantes Selection | Estevão’Wines</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="whisky.css">
+    <link rel="stylesheet" href="whisky.css"> <!-- Reusing same layout styles -->
 </head>
-<body class="whisky-page"> <!-- Reusing whisky-page class for consistent styling -->
+<body class="whisky-page">
     <header id="main-header">
         <nav class="header-container">
             <a href="menu.html" class="back-button" aria-label="Voltar para Produtos">
@@ -74,58 +74,70 @@
         </nav>
     </div>
 
-    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/vineyard.jpg');">
-        <h1 data-reveal="bottom">Nossa Adega</h1>
-        <p data-reveal="bottom">Rótulos selecionados que traduzem a alma de grandes terroirs ao redor do mundo.</p>
+    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-serving.png');">
+        <h1 data-reveal="bottom">Espumantes</h1>
+        <p data-reveal="bottom">A celebração perfeita em cada borbulha. Descubra o frescor e a elegância dos nossos espumantes premium.</p>
     </section>
 
     <main class="products-section">
         <div class="products-grid">
-            <!-- Lumière Blanc -->
+            <!-- Éclat Rosé -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_lumiere.png" alt="Lumière Blanc" class="product-image">
+                <img src="assets/espumante_eclat_rose.png" alt="Éclat Rosé" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Branco Seco • Chardonnay • 2022</span>
-                    <h2>Lumière Blanc</h2>
-                    <p class="product-description">Um Chardonnay vibrante do Vale dos Vinhedos. Apresenta frescor intenso, notas cítricas e uma harmonia perfeita para momentos leves.</p>
-                    <p class="product-price">R$ 145,00</p>
-                    <button class="btn-add" data-name="Lumière Blanc Chardonnay" data-price="145.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Brut Rosé • Método Charmat • 11.5% Vol</span>
+                    <h2>Éclat Rosé</h2>
+                    <p class="product-description">Um espumante vibrante e refrescante, com notas intensas de frutas vermelhas e um perlage persistente que encanta o paladar.</p>
+                    <p class="product-price">R$ 195,00</p>
+                    <button class="btn-add" data-name="Espumante Éclat Rosé" data-price="195.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Éclat Rouge -->
+            <!-- Lumière -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_eclat.png" alt="Éclat Rouge" class="product-image">
+                <img src="assets/espumante_lumiere.png" alt="Lumière Brut" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Tinto Seco • Cabernet Sauvignon • 2020</span>
-                    <h2>Éclat Rouge</h2>
-                    <p class="product-description">Cabernet Sauvignon encorpado da Serra Gaúcha. Revela profundidade, caráter e notas de frutas vermelhas maduras com um toque de carvalho.</p>
-                    <p class="product-price">R$ 185,00</p>
-                    <button class="btn-add" data-name="Éclat Rouge Cabernet" data-price="185.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Brut • Método Tradicional • 12.5% Vol</span>
+                    <h2>Lumière Brut</h2>
+                    <p class="product-description">Sofisticação em cada detalhe. Produzido pelo método tradicional, revela notas de pão torrado e frutas secas com um frescor incomparável.</p>
+                    <p class="product-price">R$ 220,00</p>
+                    <button class="btn-add" data-name="Espumante Lumière Brut" data-price="220.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Noir Prestige -->
+            <!-- Prestige -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_noir.png" alt="Noir Prestige" class="product-image">
+                <img src="assets/espumante_prestige.png" alt="Prestige Extra Brut" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Tinto Seco • Merlot • 2019</span>
-                    <h2>Noir Prestige</h2>
-                    <p class="product-description">Elegante Merlot do Vale do Colchagua, Chile. Um vinho tinto de estrutura sofisticada, taninos aveludados e final persistente.</p>
-                    <p class="product-price">R$ 260,00</p>
-                    <button class="btn-add" data-name="Noir Prestige Merlot" data-price="260.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Extra Brut • Método Tradicional • 12% Vol</span>
+                    <h2>Prestige</h2>
+                    <p class="product-description">Para paladares exigentes. Um Extra Brut complexo, com estrutura marcante e elegância que define o padrão de excelência da Estevão’Wines.</p>
+                    <p class="product-price">R$ 280,00</p>
+                    <button class="btn-add" data-name="Espumante Prestige Extra Brut" data-price="280.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Reserva Especial -->
+            <!-- Blanc de Blancs -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/wine_reserva_especial.png" alt="Reserva Especial" class="product-image">
+                <img src="assets/espumante_blanc.png" alt="Blanc de Blancs Brut" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Reserva Famille • Douro • 2018</span>
-                    <h2>Reserva Especial</h2>
-                    <p class="product-description">A máxima expressão do Douro, Portugal. Uma reserva de família que combina tradição e excelência em um blend complexo e marcante.</p>
-                    <p class="product-price">R$ 420,00</p>
-                    <button class="btn-add" data-name="Reserva Especial Douro" data-price="420.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Brut • 100% Chardonnay • 11.5% Vol</span>
+                    <h2>Blanc de Blancs</h2>
+                    <p class="product-description">A pureza da Chardonnay transformada em borbulhas. Leve, cítrico e extremamente refrescante, ideal para celebrações inesquecíveis.</p>
+                    <p class="product-price">R$ 245,00</p>
+                    <button class="btn-add" data-name="Espumante Blanc de Blancs" data-price="245.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Rosé Elegance -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/rose_elegance_premium.png" alt="Rosé Elegance" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Rosé Prestige • Côtes de Provence • 13% Vol</span>
+                    <h2>Rosé Elegance</h2>
+                    <p class="product-description">Delicado e vibrante, perfeito para momentos leves ao sol.</p>
+                    <p class="product-price">R$ 130,00</p>
+                    <button class="btn-add" data-name="Vinho Rosé Elegance" data-price="130.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
         </div>
