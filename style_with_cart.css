@@ -1,0 +1,515 @@
+﻿:root {
+    --wine-deep: #4B0F1A;
+    --wine-deep-rgb: 75, 15, 26;
+    --butter-yellow: #F5E6C8;
+    --butter-yellow-rgb: 245, 230, 200;
+    
+    /* ConfiguraÃ§Ã£o de Cores DinÃ¢micas */
+    --bg-color: var(--wine-deep);
+    --bg-rgb: var(--wine-deep-rgb);
+    --text-color: var(--butter-yellow);
+    --text-color-rgb: var(--butter-yellow-rgb);
+    --border-color: rgba(var(--text-color-rgb), 0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.light-mode {
+    --bg-color: var(--butter-yellow);
+    --bg-rgb: var(--butter-yellow-rgb);
+    --text-color: var(--wine-deep);
+    --text-color-rgb: var(--wine-deep-rgb);
+    --border-color: rgba(var(--text-color-rgb), 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .monogram, .overlay-links a {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header Specification */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Entre 70px e 90px */
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    transition: background-color var(--transition-speed), height var(--transition-speed), border var(--transition-speed);
+}
+
+header.scrolled {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    width: 100%;
+    padding: 0 60px; /* Desktop */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Identity - Left Side */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Monograma ao lado do nome */
+    cursor: pointer;
+}
+
+.monogram {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Controls - Right Side */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-speed);
+}
+
+#theme-toggle svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1.5;
+}
+
+/* Esconder os Ã­cones baseados no tema */
+body.light-mode .sun-icon { display: none; }
+body:not(.light-mode) .moon-icon { display: none; }
+
+/* Hamburger Menu */
+.hamburger {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* AnimaÃ§Ã£o do HambÃºrguer para X */
+.hamburger.active .line-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line-2 {
+    opacity: 0;
+}
+
+.hamburger.active .line-3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Fullscreen Overlay Menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.close-bar {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    top: 50%;
+}
+
+.close-bar.line-1 { transform: rotate(45deg); }
+.close-bar.line-2 { transform: rotate(-45deg); }
+
+.menu-watermark {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 40vh;
+    color: var(--text-color);
+    opacity: 0.04; /* 3-5% conforme pedido */
+    pointer-events: none;
+    z-index: -1;
+}
+
+.overlay-links {
+    list-style: none;
+    text-align: center;
+}
+
+.overlay-links li {
+    margin: 32px 0;
+}
+
+.overlay-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 6px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.overlay-links a:hover {
+    transform: scale(1.04);
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: url('assets/hero-serving.png') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(var(--bg-rgb), 0.3), rgba(var(--bg-rgb), 0.6));
+    z-index: 1;
+}
+
+/* body.light-mode .hero-overlay handled by variable above */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 5rem;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    color: var(--text-color);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    opacity: 0.9;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Sections & General */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 10rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 12px;
+    display: block;
+}
+
+h3 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 1px solid var(--text-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* Wine Grid */
+.wine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 64px;
+}
+
+.wine-card {
+    background: rgba(var(--text-color-rgb), 0.03);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+/* body.light-mode .wine-card handled by variable above */
+
+.wine-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--text-color);
+}
+
+.wine-image {
+    height: 380px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wine-image img {
+    max-height: 100%;
+    transition: 0.5s ease;
+}
+
+.wine-card:hover .wine-image img {
+    transform: scale(1.08);
+}
+
+.wine-info h4 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.wine-info p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin-bottom: 24px;
+}
+
+.price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Form */
+input, textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(var(--text-color-rgb), 0.2);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* body.light-mode input handled by variable above */
+
+input:focus, textarea:focus {
+    border-color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+/* Animations Reveal */
+[data-reveal] {
+    opacity: 0;
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal="left"] { transform: translateX(-40px); }
+[data-reveal="right"] { transform: translateX(40px); }
+[data-reveal="bottom"] { transform: translateY(40px); }
+
+.revealed {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}
+
+/* RESPONSIVIDADE (ESPECIFICAÃ‡Ã•ES DO HEADER) */
+
+@media (min-width: 1025px) {
+    /* Desktop (>1024px) */
+    .header-container { padding: 0 60px; }
+}
+
+@media (max-width: 1024px) {
+    /* Tablet (768px - 1024px) */
+    .header-container { padding: 0 40px; }
+    .hero h2 { font-size: 4rem; }
+    h3 { font-size: 3rem; }
+}
+
+@media (max-width: 767px) {
+    /* Mobile (<768px) */
+    header { height: 75px; }
+    .header-container { padding: 0 20px; }
+    
+    .brand {
+        flex-direction: column; /* Vertical mais sofisticado no mobile */
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .monogram { font-size: 1.6rem; }
+    .brand-name { font-size: 0.65rem; letter-spacing: 1px; }
+    
+    .hero h2 { font-size: 3rem; }
+    .grid { gap: 3rem; }
+    
+    .overlay-links a { font-size: 1.8rem; letter-spacing: 4px; }
+    
+    .overlay-close { right: 20px; }
+}
+
+/* Transitions */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease forwards;
+}
+

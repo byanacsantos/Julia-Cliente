@@ -1,0 +1,198 @@
+.menu-page {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+
+.menu-main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px; /* Space for header */
+}
+
+
+.menu-container {
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* LADO ESQUERDO - CARDS */
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.category-card {
+    background-color: rgba(var(--text-color-rgb), 0.03);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Theme overrides handled by variables */
+
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 24px;
+    color: var(--text-color);
+    transition: transform 0.4s ease;
+}
+
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.category-card p {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hover Interativo */
+.category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--text-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background-color: rgba(var(--text-color-rgb), 0.08);
+}
+
+
+.category-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+/* LADO DIREITO - INSTITUCIONAL */
+.menu-subtitle {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 6px;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.menu-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.menu-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.highlight-box {
+    border-left: 2px solid var(--text-color);
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+
+.highlight-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.highlight-box p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.btn-menu {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 1.2rem 3.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+
+.btn-menu:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .menu-container {
+        gap: 60px;
+        padding: 40px;
+    }
+    .menu-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+    }
+    
+    .menu-right {
+        order: -1; /* Apresentação no topo no mobile conforme solicitado */
+        text-align: center;
+    }
+    
+    .menu-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .highlight-box {
+        border-left: none;
+        border-top: 1px solid var(--text-color);
+        padding-left: 0;
+        padding-top: 20px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    .menu-container {
+        padding: 20px;
+    }
+    .menu-title {
+        font-size: 2.2rem;
+    }
+}

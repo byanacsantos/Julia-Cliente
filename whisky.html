@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisky Selection | Estevão’Wines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="whisky.css">
+</head>
+<body class="whisky-page">
+    <header id="main-header">
+        <nav class="header-container">
+            <div class="brand" onclick="window.location.href='index.html'">
+                <div class="monogram">EW</div>
+                <div class="brand-name">Estevão’Wines</div>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" aria-label="Alternar Tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                
+                <button id="cart-toggle" aria-label="Abrir Carrinho" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+
+                <div id="auth-header-btn">
+                    <a href="auth.html" id="login-nav-btn" class="login-btn-link" aria-label="Login">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="user-icon">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span id="user-name-display">Entrar</span>
+                    </a>
+                </div>
+
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar line-1"></span>
+                    <span class="bar line-2"></span>
+                    <span class="bar line-3"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="fullscreen-overlay" class="overlay">
+        <div class="overlay-close" id="close-menu">
+            <span class="close-bar line-1"></span>
+            <span class="close-bar line-2"></span>
+        </div>
+        <div class="menu-watermark">EW</div>
+        <nav class="overlay-nav">
+            <div id="user-info-overlay" class="user-info-overlay"></div>
+            <ul class="overlay-links">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="menu.html">PRODUTOS</a></li>
+                <li><a href="index.html#historia">SOBRE</a></li>
+                <li><a href="index.html#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="whisky-hero">
+        <h1 data-reveal="bottom">Nossos Whiskies</h1>
+        <p data-reveal="bottom">Uma seleção exclusiva de maltes envelhecidos para os paladares mais exigentes.</p>
+    </section>
+
+    <main class="products-section">
+        <div class="products-grid">
+            <!-- Vértice EW -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/whisky_vertice.png" alt="Vértice EW" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Single Malt • 18 Years • Sherry Casks</span>
+                    <h2>Vértice EW</h2>
+                    <p class="product-description">Um Single Malt excepcional envelhecido por 18 anos em barris de Jerez Oloroso. Notas intensas de frutas secas, especiarias e um final longo e sofisticado.</p>
+                    <p class="product-price">R$ 1.250,00</p>
+                    <button class="btn-add" data-name="Vértice EW - 18 Anos" data-price="1250.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Horizonte EW -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/whisky_horizonte.png" alt="Horizonte EW" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Blended Malt • 15 Years • Bourbon & Sherry</span>
+                    <h2>Horizonte EW</h2>
+                    <p class="product-description">Blended Malt equilibrado de 15 anos, maturado em barris de Bourbon e Jerez. Proporciona uma harmonia perfeita entre doçura de baunilha e toques amadeirados.</p>
+                    <p class="product-price">R$ 890,00</p>
+                    <button class="btn-add" data-name="Horizonte EW - 15 Anos" data-price="890.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Reserva EW -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/whisky_reserva.png" alt="Reserva EW" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Single Malt • 12 Years • Small Batch</span>
+                    <h2>Reserva EW</h2>
+                    <p class="product-description">Single Malt de 12 anos em edição Small Batch. Envelhecido em barris de carvalho, destaca-se pelo frescor e pureza, com sutis notas de caramelo e malte.</p>
+                    <p class="product-price">R$ 560,00</p>
+                    <button class="btn-add" data-name="Reserva EW - 12 Anos" data-price="560.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrinho Lateral -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-msg">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-container">
+                <span>Total</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <div id="payment-section" class="payment-section">
+                <h4>Forma de Pagamento</h4>
+                <div class="payment-options">
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Crédito">
+                        <span>Cartão de Crédito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Débito">
+                        <span>Cartão de Débito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="PIX">
+                        <span>PIX</span>
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-primary checkout-btn">Confirmar Pagamento</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

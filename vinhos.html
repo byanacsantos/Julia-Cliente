@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Selection | Estevão’Wines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="whisky.css">
+</head>
+<body class="whisky-page"> <!-- Reusing whisky-page class for consistent styling -->
+    <header id="main-header">
+        <nav class="header-container">
+            <div class="brand" onclick="window.location.href='index.html'">
+                <div class="monogram">EW</div>
+                <div class="brand-name">Estevão’Wines</div>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" aria-label="Alternar Tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                
+                <button id="cart-toggle" aria-label="Abrir Carrinho" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+
+                <div id="auth-header-btn">
+                    <a href="auth.html" id="login-nav-btn" class="login-btn-link" aria-label="Login">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="user-icon">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span id="user-name-display">Entrar</span>
+                    </a>
+                </div>
+
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar line-1"></span>
+                    <span class="bar line-2"></span>
+                    <span class="bar line-3"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="fullscreen-overlay" class="overlay">
+        <div class="overlay-close" id="close-menu">
+            <span class="close-bar line-1"></span>
+            <span class="close-bar line-2"></span>
+        </div>
+        <div class="menu-watermark">EW</div>
+        <nav class="overlay-nav">
+            <div id="user-info-overlay" class="user-info-overlay"></div>
+            <ul class="overlay-links">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="menu.html">PRODUTOS</a></li>
+                <li><a href="index.html#historia">SOBRE</a></li>
+                <li><a href="index.html#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/vineyard.jpg');">
+        <h1 data-reveal="bottom">Nossa Adega</h1>
+        <p data-reveal="bottom">Rótulos selecionados que traduzem a alma de grandes terroirs ao redor do mundo.</p>
+    </section>
+
+    <main class="products-section">
+        <div class="products-grid">
+            <!-- Lumière Blanc -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/wine_lumiere.png" alt="Lumière Blanc" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Branco Seco • Chardonnay • 2022</span>
+                    <h2>Lumière Blanc</h2>
+                    <p class="product-description">Um Chardonnay vibrante do Vale dos Vinhedos. Apresenta frescor intenso, notas cítricas e uma harmonia perfeita para momentos leves.</p>
+                    <p class="product-price">R$ 145,00</p>
+                    <button class="btn-add" data-name="Lumière Blanc Chardonnay" data-price="145.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Éclat Rouge -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/wine_eclat.png" alt="Éclat Rouge" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Tinto Seco • Cabernet Sauvignon • 2020</span>
+                    <h2>Éclat Rouge</h2>
+                    <p class="product-description">Cabernet Sauvignon encorpado da Serra Gaúcha. Revela profundidade, caráter e notas de frutas vermelhas maduras com um toque de carvalho.</p>
+                    <p class="product-price">R$ 185,00</p>
+                    <button class="btn-add" data-name="Éclat Rouge Cabernet" data-price="185.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Noir Prestige -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/wine_noir.png" alt="Noir Prestige" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Tinto Seco • Merlot • 2019</span>
+                    <h2>Noir Prestige</h2>
+                    <p class="product-description">Elegante Merlot do Vale do Colchagua, Chile. Um vinho tinto de estrutura sofisticada, taninos aveludados e final persistente.</p>
+                    <p class="product-price">R$ 260,00</p>
+                    <button class="btn-add" data-name="Noir Prestige Merlot" data-price="260.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- Reserva Especial -->
+            <div class="product-card" data-reveal="bottom">
+                <img src="assets/wine_reserva_especial.png" alt="Reserva Especial" class="product-image">
+                <div class="product-info">
+                    <span class="product-meta">Reserva Famille • Douro • 2018</span>
+                    <h2>Reserva Especial</h2>
+                    <p class="product-description">A máxima expressão do Douro, Portugal. Uma reserva de família que combina tradição e excelência em um blend complexo e marcante.</p>
+                    <p class="product-price">R$ 420,00</p>
+                    <button class="btn-add" data-name="Reserva Especial Douro" data-price="420.00">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrinho Lateral -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-msg">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-container">
+                <span>Total</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <div id="payment-section" class="payment-section">
+                <h4>Forma de Pagamento</h4>
+                <div class="payment-options">
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Crédito">
+                        <span>Cartão de Crédito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Débito">
+                        <span>Cartão de Débito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="PIX">
+                        <span>PIX</span>
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-primary checkout-btn">Confirmar Pagamento</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Seleção | Estevão’Wines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body class="menu-page">
+    <header id="main-header">
+        <nav class="header-container">
+            <div class="brand" onclick="window.location.href='index.html'">
+                <div class="monogram">EW</div>
+                <div class="brand-name">Estevão’Wines</div>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" aria-label="Alternar Tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                
+                <button id="cart-toggle" aria-label="Abrir Carrinho" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+
+                <div id="auth-header-btn">
+                    <a href="auth.html" id="login-nav-btn" class="login-btn-link" aria-label="Login">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="user-icon">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span id="user-name-display">Entrar</span>
+                    </a>
+                </div>
+
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar line-1"></span>
+                    <span class="bar line-2"></span>
+                    <span class="bar line-3"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="fullscreen-overlay" class="overlay">
+        <div class="overlay-close" id="close-menu">
+            <span class="close-bar line-1"></span>
+            <span class="close-bar line-2"></span>
+        </div>
+        <div class="menu-watermark">EW</div>
+        <nav class="overlay-nav">
+            <div id="user-info-overlay" class="user-info-overlay"></div>
+            <ul class="overlay-links">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="menu.html">PRODUTOS</a></li>
+                <li><a href="index.html#historia">SOBRE</a></li>
+                <li><a href="index.html#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="menu-main">
+        <div class="menu-container">
+
+            
+            <!-- LADO ESQUERDO: CATEGORIAS -->
+            <section class="menu-left">
+                <div class="category-grid">
+                    <a href="whisky.html" class="category-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <!-- Whisky Icon SVG -->
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 10l4 40h16l4-40H20z" />
+                                <path d="M25 45h14" opacity="0.5"/>
+                                <rect x="28" y="25" width="8" height="8" rx="1" transform="rotate(15 32 29)" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <h3>Whisky</h3>
+                        <p>A sofisticação e o sabor marcante dos melhores maltes envelhecidos.</p>
+                    </a>
+                    
+                    <a href="vinhos.html" class="category-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <!-- Wine Icon SVG -->
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 10s0 20 10 20 10-20 10-20H22zM32 30v20M24 50h16" />
+                                <path d="M26 18h12M28 24h8" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Vinhos</h3>
+                        <p>Rótulos selecionados das melhores regiões vinícolas.</p>
+                    </a>
+                    
+                    <a href="/espumantes" class="category-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <!-- Bubbles Icon SVG -->
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 25h24v29H20zM32 25V10M26 12l6-2 6 2M22 35h20M24 45h16" />
+                                <circle cx="32" cy="5" r="2" />
+                                <circle cx="38" cy="8" r="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Espumantes</h3>
+                        <p>Leveza e frescor para celebrar momentos inesquecíveis.</p>
+                    </a>
+                    
+                    <a href="/champanhe" class="category-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <!-- Flute Icon SVG -->
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M24 10v25c0 8 8 8 8 8s8 0 8-8V10H24zM32 43v10M26 53h12" />
+                                <path d="M28 15h8M30 20h4" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Champanhe</h3>
+                        <p>A máxima expressão do luxo e da tradição francesa.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- LADO DIREITO: APRESENTAÇÃO -->
+            <section class="menu-right">
+                <div class="institutional-content" data-reveal="right">
+                    <span class="menu-subtitle">OUR SELECTION</span>
+                    <h2 class="menu-title">Tradição e sofisticação em cada vinho</h2>
+                    <p class="menu-description">
+                        Na Estevão’Wines, cada bebida é cuidadosamente selecionada e produzida para expressar autenticidade, tradição e excelência. Nossa curadoria reúne rótulos que traduzem o equilíbrio perfeito entre técnica e paixão.
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <h4>Produção Artesanal Selecionada</h4>
+                        <p>Cada garrafa reflete um processo rigoroso, garantindo qualidade e identidade em cada detalhe.</p>
+                    </div>
+
+                    <a href="#" class="btn btn-menu">EXPLORAR MAIS</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Carrinho Lateral -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Itens serão inseridos aqui via JS -->
+            <p class="empty-msg">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-container">
+                <span>Total</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+
+            <div id="payment-section" class="payment-section">
+                <h4>Forma de Pagamento</h4>
+                <div class="payment-options">
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Crédito">
+                        <span>Cartão de Crédito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="Débito">
+                        <span>Cartão de Débito</span>
+                    </label>
+                    <label class="payment-opt">
+                        <input type="radio" name="payment" value="PIX">
+                        <span>PIX</span>
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary checkout-btn">Confirmar Pagamento</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
