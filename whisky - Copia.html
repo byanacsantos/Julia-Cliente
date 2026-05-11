@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espumantes Selection | Estevão’Wines</title>
+    <title>Whisky Selection | Estevão’Wines</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="whisky.css"> <!-- Reusing same layout styles -->
+    <link rel="stylesheet" href="whisky.css">
 </head>
 <body class="whisky-page">
     <header id="main-header">
@@ -74,70 +74,46 @@
         </nav>
     </div>
 
-    <section class="whisky-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero_espumantes.png');">
-        <h1 data-reveal="bottom">Espumantes</h1>
-        <p data-reveal="bottom">A celebração perfeita em cada borbulha. Descubra o frescor e a elegância dos nossos espumantes premium.</p>
+    <section class="whisky-hero">
+        <h1 data-reveal="bottom">Nossos Whiskies</h1>
+        <p data-reveal="bottom">Uma seleção exclusiva de maltes envelhecidos para os paladares mais exigentes.</p>
     </section>
 
     <main class="products-section">
         <div class="products-grid">
-            <!-- Éclat Rosé -->
+            <!-- Vértice EW -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/espumante_eclat_rose.png" alt="Éclat Rosé" class="product-image">
+                <img src="assets/whisky_vertice.png" alt="Vértice EW" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Brut Rosé • Método Charmat • 11.5% Vol</span>
-                    <h2>Éclat Rosé</h2>
-                    <p class="product-description">Um espumante vibrante e refrescante, com notas intensas de frutas vermelhas e um perlage persistente que encanta o paladar.</p>
-                    <p class="product-price">R$ 195,00</p>
-                    <button class="btn-add" data-name="Espumante Éclat Rosé" data-price="195.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Single Malt • 18 Years • Sherry Casks</span>
+                    <h2>Vértice EW</h2>
+                    <p class="product-description">Um Single Malt excepcional envelhecido por 18 anos em barris de Jerez Oloroso. Notas intensas de frutas secas, especiarias e um final longo e sofisticado.</p>
+                    <p class="product-price">R$ 1.250,00</p>
+                    <button class="btn-add" data-name="Vértice EW - 18 Anos" data-price="1250.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Lumière -->
+            <!-- Horizonte EW -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/espumante_lumiere.png" alt="Lumière Brut" class="product-image">
+                <img src="assets/whisky_horizonte.png" alt="Horizonte EW" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Brut • Método Tradicional • 12.5% Vol</span>
-                    <h2>Lumière Brut</h2>
-                    <p class="product-description">Sofisticação em cada detalhe. Produzido pelo método tradicional, revela notas de pão torrado e frutas secas com um frescor incomparável.</p>
-                    <p class="product-price">R$ 220,00</p>
-                    <button class="btn-add" data-name="Espumante Lumière Brut" data-price="220.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Blended Malt • 15 Years • Bourbon & Sherry</span>
+                    <h2>Horizonte EW</h2>
+                    <p class="product-description">Blended Malt equilibrado de 15 anos, maturado em barris de Bourbon e Jerez. Proporciona uma harmonia perfeita entre doçura de baunilha e toques amadeirados.</p>
+                    <p class="product-price">R$ 890,00</p>
+                    <button class="btn-add" data-name="Horizonte EW - 15 Anos" data-price="890.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
 
-            <!-- Prestige -->
+            <!-- Reserva EW -->
             <div class="product-card" data-reveal="bottom">
-                <img src="assets/espumante_prestige.png" alt="Prestige Extra Brut" class="product-image">
+                <img src="assets/whisky_reserva.png" alt="Reserva EW" class="product-image">
                 <div class="product-info">
-                    <span class="product-meta">Extra Brut • Método Tradicional • 12% Vol</span>
-                    <h2>Prestige</h2>
-                    <p class="product-description">Para paladares exigentes. Um Extra Brut complexo, com estrutura marcante e elegância que define o padrão de excelência da Estevão’Wines.</p>
-                    <p class="product-price">R$ 280,00</p>
-                    <button class="btn-add" data-name="Espumante Prestige Extra Brut" data-price="280.00">ADICIONAR AO CARRINHO</button>
-                </div>
-            </div>
-
-            <!-- Blanc de Blancs -->
-            <div class="product-card" data-reveal="bottom">
-                <img src="assets/espumante_blanc.png" alt="Blanc de Blancs Brut" class="product-image">
-                <div class="product-info">
-                    <span class="product-meta">Brut • 100% Chardonnay • 11.5% Vol</span>
-                    <h2>Blanc de Blancs</h2>
-                    <p class="product-description">A pureza da Chardonnay transformada em borbulhas. Leve, cítrico e extremamente refrescante, ideal para celebrações inesquecíveis.</p>
-                    <p class="product-price">R$ 245,00</p>
-                    <button class="btn-add" data-name="Espumante Blanc de Blancs" data-price="245.00">ADICIONAR AO CARRINHO</button>
-                </div>
-            </div>
-
-            <!-- Rosé Elegance -->
-            <div class="product-card" data-reveal="bottom">
-                <img src="assets/rose_elegance_premium.png" alt="Rosé Elegance" class="product-image">
-                <div class="product-info">
-                    <span class="product-meta">Rosé Prestige • Côtes de Provence • 13% Vol</span>
-                    <h2>Rosé Elegance</h2>
-                    <p class="product-description">Delicado e vibrante, perfeito para momentos leves ao sol.</p>
-                    <p class="product-price">R$ 130,00</p>
-                    <button class="btn-add" data-name="Vinho Rosé Elegance" data-price="130.00">ADICIONAR AO CARRINHO</button>
+                    <span class="product-meta">Single Malt • 12 Years • Small Batch</span>
+                    <h2>Reserva EW</h2>
+                    <p class="product-description">Single Malt de 12 anos em edição Small Batch. Envelhecido em barris de carvalho, destaca-se pelo frescor e pureza, com sutis notas de caramelo e malte.</p>
+                    <p class="product-price">R$ 560,00</p>
+                    <button class="btn-add" data-name="Reserva EW - 12 Anos" data-price="560.00">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
         </div>
