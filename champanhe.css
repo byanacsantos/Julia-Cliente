@@ -7,8 +7,7 @@
     align-items: center;
     text-align: center;
     padding-top: 80px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
-                linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%), /* Golden tint */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
                 url('assets/champagne-hero.png');
     background-size: cover;
     background-position: center;
@@ -16,7 +15,6 @@
     color: white;
     position: relative;
     overflow: hidden;
-    filter: contrast(1.05) brightness(0.95);
 }
 
 .champagne-hero::before {
@@ -43,7 +41,7 @@
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .champagne-hero p {
@@ -53,7 +51,7 @@
     letter-spacing: 2px;
     font-weight: 300;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
 }
 
 @keyframes fadeInUp {
@@ -69,8 +67,7 @@
 
 /* Adjusting the hero for champagnes specifically */
 .champagne-page .whisky-hero::after {
-    backdrop-filter: blur(2px); /* Less blur to see the bubbles */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Enhancing product cards for a more premium look */
@@ -78,7 +75,15 @@
     border: none;
     background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
     box-shadow: 20px 20px 60px rgba(0,0,0,0.1), -20px -20px 60px rgba(255,255,255,0.02);
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
+
+.champagne-page .product-card:nth-child(1) { animation-delay: 0.4s; }
+.champagne-page .product-card:nth-child(2) { animation-delay: 0.5s; }
+.champagne-page .product-card:nth-child(3) { animation-delay: 0.6s; }
+.champagne-page .product-card:nth-child(4) { animation-delay: 0.7s; }
+
 
 .champagne-page .product-card:hover {
     background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
